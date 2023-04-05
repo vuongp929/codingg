@@ -1,0 +1,551 @@
+#container{
+	display: block;
+	position: fixed;
+height: auto;
+width: 100%;
+margin-left: auto;
+margin-right: auto;
+
+}
+body{
+	margin: 0px;
+}
+nav{
+	height: 56px;
+	width: 100%;
+	background-color: #0F0F0F;
+}
+.gridcontainer{
+	padding-left: 25px;
+    padding-top: 20px;
+    height: 56px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+}
+.menuicon{
+	height: 40px;
+	width: auto;
+	padding-top: 6px;
+	margin-left: 10px;
+}
+.menuicon2{
+	height: 40px;
+	width: auto;
+	padding-top: 6px;
+	display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+}
+.khung-nav-bar{
+	height: 40px;
+	width: 100%;
+	display: inline;
+}
+.nav-bar-button{
+  width: 35px;
+  height: 35px;
+  color: #ffffff;
+  float: left;
+  cursor: pointer;
+}
+.menu{
+	position: fixed;
+	top:0;
+	left: 0;
+	bottom: 0;
+	width: 240px;
+	max-width: 100%;
+	background-color: #0F0F0F;
+	transform: translateX(-100%);
+	transition: transform linear 0.2s;
+}
+.nutTat{
+	width: 35px;
+  height: 35px;
+}
+.inputMenu:checked ~ .overlayer{
+	display: block;
+}
+.inputMenu:checked ~ .menu{
+	transform: translateX(0%);
+}
+.inputMenu:checked ~ .nutTat{
+	display: block;
+}
+.menubatra {
+  height: 100%;
+  display: grid;
+  margin-left: -13px;
+  list-style-type: none;
+}
+
+.menubatra li {
+	width: 202px;
+	height: 40px;
+  
+}
+
+.menubatra li:hover {
+    background-color: #272727;
+    border-radius: 8px;
+}
+.menubatra a{
+	text-decoration: none;
+	padding: 4px 0;
+	font-family: "Roboto","Arial",sans-serif;
+    font-size: 0.9rem;
+	color: white;
+	display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+	height: 40px;
+	width: 204px;
+
+}
+.menubatra svg{
+	height: 24px;
+	width: 24px;
+}
+.itemMenu{
+	height: 20px;
+	width: 132px;
+	margin-left: 15px;
+    margin-top: 3px;
+}
+.nutTat{
+	 width: 35px;
+  height: 35px;
+  color: #ffffff;
+  float: left;
+}
+.overlayer{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.3);
+  display: none;
+  animation: fadeIn linear 0.1s;
+}
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+.YouTubelogo{
+	height: 20px;
+	display: inline-grid;
+}
+.YouTubelogo1{
+	height: 20px;
+}
+.khung-sreach{
+	display: grid;
+    height: 40px;
+    grid-template-columns: auto auto;
+    width: 59%;
+    justify-items: end;
+    margin-top: -7px;
+}
+.ytbsreachbox{
+	margin-top: -0.5%;
+	margin-left: 20%;
+	height: 33px;
+	width: 572px;
+	border-radius: 37px 0px 0px 37px;
+	background: none;
+	border-style: groove;
+
+}
+.sreachButton{
+	border-radius: 0px 37px 37px 0px;
+    height: 38.56px;
+    width: 68px;
+    margin-top: -3px;
+	border:none;
+	background-color: #222222;
+}
+.maynutCuoi{
+	display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: end;
+    justify-items: center;
+    margin-right: 58px;
+}
+.khung-icontimkiem{
+	height: 40px;
+	width: 26px;
+	margin-top: -6px;
+	margin-right: 20px;
+	display: none;
+}
+.icontimkiem{
+	display: none;
+	width: 24px;
+  height: 24px;
+}
+.khung-upload{
+	height: 40px;
+	width: 26px;
+	margin-top: 2px;
+	margin-left: 21%;
+	margin-right: 20px;
+}
+.upload{
+	width: 24px;
+  height: 24px;
+}
+.khung-thongbao{
+	height: 40px;
+	width: 26px;
+	margin-top: 2px;
+	margin-right: 20px;
+}
+.thongbao{
+	width: 24px;
+  height: 24px;
+}
+.khung-avt{
+	height: 40px;
+	margin-top: -3px;
+}
+.avt{
+	width: 35px;
+  height: 35px;
+}
+.avt img{
+-webkit-border-radius:50%;
+}
+article{
+	height: auto;
+    width: 100%;
+    background-color: #0F0F0F;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.maincontent{
+	margin-left: 80px;
+    height: auto;
+    width: 1024px;
+    padding: 10px;
+	
+}
+.maincontent h1{
+	color: white;
+	font-size: 20px;
+}
+.duoiVideo{
+	height: 54.67px;
+	width: 1024px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.anhKenh{
+	display: grid;
+    grid-template-columns: auto auto;
+	height: 42.67px;
+	width: 182.22px;
+}
+.anhKenh img{
+	-webkit-border-radius:50%;
+}
+.kenhvaNguoidangky{
+    margin-left: 8px;
+    justify-content: space-between;
+    color: gray;
+    font-size: 14px;
+    margin-right: 10px;
+}
+.kenhvaNguoidangky a{
+	font-size:20px;
+	color: white;
+	text-decoration: none; 
+}
+.nutdangky{
+	height: 36px;
+	width: 83.56px;
+}
+.submitButton{
+	height: 36px;
+	width: 83.56px;
+	border-radius: 30px 30px;
+}
+.maycainut{
+	height: 42.67px;
+	width: 335.22px;
+	display: grid;
+    grid-template-columns: auto auto;
+	margin-left: 519px;
+}
+.nutLikevaDislike{
+	height: 36px;
+	width: 132px;
+	display: grid;
+    grid-template-columns: auto auto;
+
+	
+}
+.nutLike{
+	display: grid;
+    grid-template-columns: auto auto;
+    align-content: space-around;
+    align-items: center;
+    height: 36px;
+    width: 80px;
+    border-radius: 30px 0px 0px 30px;
+    border: none;
+    border-right: 1px solid gray;
+    justify-content: space-around;
+    align-content: space-around;
+    background-color: #272727;
+    color: white;
+    font-size: 15px;
+}
+.nutDislike{
+	height: 36px;
+	width: 52px;
+	border-radius: 0px 30px 30px 0px;
+	border:none;
+	background-color: #272727;
+}
+.nutChiaSe{
+	height: 36px;
+	width: 110.11px;
+	margin-left: 10px;
+}
+.ChiaSe{
+	height: 36px;
+	width: 110.11px;
+	border-radius: 30px 30px;
+	background-color: #272727;
+	border:none;
+	color: white;
+	font-size: 16px;
+}
+.nut3Cham{
+	height: 36px;
+	width: 36px;
+}
+button{
+	cursor: pointer;
+}
+.nutLike:hover{
+	background-color: #3F3F3F;
+}
+.nutDislike:hover{
+	background-color: #3F3F3F;
+
+}
+.ChiaSe:hover{
+	background-color: #3F3F3F;
+}
+.noidungVideo{
+	height: auto;
+	width: 1024px;
+}
+.noidung{
+	padding: 10px;
+	display: grid;
+	color: white;
+	background-color: #272727;
+	margin-bottom: 10px;
+	border-radius: 8px;
+}
+.noidung:hover{
+	background-color: #3F3F3F;
+}
+.noidung a{
+	text-decoration: none;
+	color:#3EA6FF;
+}
+.binhluan{
+	height: 63px;
+	width: 666.44px;
+	display: grid;
+	grid-template-columns: auto auto;
+}
+.binhluan img{
+	-webkit-border-radius:50%;
+}
+.thanhBinhLuan{
+    height: 40px;
+    width: 950.44px;
+    margin-left: 18px;
+    display: grid;
+    justify-items: end; 
+}
+.comment{
+	height: 20px;
+	width: 950.44px;
+	cursor: text;
+    padding-bottom: 4px;
+    background: none;
+    border-top: none;
+    border-right: none;
+    border-left: none; 
+}
+.nutBinhLuan{
+	height: 36px;
+	width:91.56px;
+	border-radius: 30px 30px;
+	background-color: #272727;
+	border:none;
+	color: white;
+	font-size: 16px;
+	margin-top: 10px;
+}
+.nutBinhLuan:hover{
+	background-color: #3F3F3F;
+}
+.sideContent{
+	height: auto;
+	width: auto;
+}
+.relative{
+	height: 50.67px;
+	width: 402px;
+	display: inline-grid;
+    grid-template-columns: auto auto auto;
+    color: white;
+    justify-items: center;
+    align-items: end;
+}
+.tatca{
+	height: 32px;
+	width: 65.21px;
+	border: none;
+	border-radius: 8px;
+	background-color: #272727;
+		display: grid;
+    justify-content: space-around;
+    align-items: center;
+}
+.Cuachengspedup{
+	height: 32px;
+	width: 139.89px;
+	border-radius: 8px;
+	background-color: #272727;
+		display: grid;
+    justify-content: space-around;
+    align-items: center;
+}
+.videocolienquan{
+	height: 32px;
+	width: 143.17px;
+	border-radius: 8px;
+	background-color: #272727;
+		display: grid;
+    justify-content: space-around;
+    align-items: center;
+}
+.videoRelative{
+	height: auto;
+	width: 402px;
+	margin-top: 10px;
+}
+.item{
+	width: 402px;
+	height: 94px;
+	display: grid;
+    grid-template-columns: auto auto;
+	font-size: 8px;
+	color: white;
+	margin-bottom: 15px;
+	
+}
+.item iframe{
+	border-radius: 8px;
+}
+.noidungitem{
+	height:80px; 
+	width:202px;
+	display: grid;
+}
+.item h2{
+	width: 202px;
+	height: 40px;
+}
+.item a{
+	text-decoration: none;
+	color: white;
+	height: 18px;
+	width: auto;
+	font-size: 14px;
+}
+.item h3{
+	width: 202px;
+	height: 18px;
+	font-size: 10px;
+}
+@media screen and (max-width:767.98px){
+.maincontent iframe{
+	padding-right: 9%;
+    width: 71%;
+    height: 80%;
+}
+.maincontent{
+	text-align: center;
+	width: 92%;
+}
+.maincontent h1{
+	margin-left: 10.5%;
+	text-align: left;
+}
+.duoiVideo{
+	margin-left: 9%;
+}
+.noidungVideo{
+	margin-left: 9%;
+	text-align: left;
+	width: auto;
+}
+.binhluan{
+	margin-left: 9%;
+}
+article{
+	grid-template-columns: none;
+	grid-template-rows: auto auto; 
+  	justify-content: center;
+}
+.gridcontainer{
+	grid-template-columns: auto auto;
+
+}
+.khung-sreach{
+	display: none;
+
+}
+.khung-icontimkiem{
+	display: block;
+}
+.icontimkiem{
+	display: block;
+}
+.maynutCuoi{
+	margin-right: 33px;
+	grid-template-columns: auto auto auto auto;
+}
+.sideContent{
+	margin-left: 181px;
+	margin-top: 30%;
+}
+.videoRelative{
+	grid-row-gap: 24px;
+	display: grid;
+    grid-template-columns: auto auto;
+   	padding-bottom: 27px;
+}
+.item{
+	margin-bottom: 0px;
+}
+.maycainut{
+	margin-left: 5%;
+
+}
+}
