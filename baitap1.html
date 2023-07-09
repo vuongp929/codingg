@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fiverserver.json">
+    <title>Trang web bán hàng</title>
+    <style>
+        .product {
+            display: inline-block;
+            margin: 30px;
+            color: aqua;
+        }
+        .addProduct {
+            width: 500px;
+            margin-top: 20px;
+        }
+        .cart{
+            position: absolute;
+            top:0;
+            right: 0;
+            width: 100px;
+            
+        }
+        .webbanhang{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trang web bán hàng</h1>
+
+    <div class="webbanhang">
+        <ul id="list-items">
+
+        </ul>
+    </div>
+        
+        <div class="cart">
+        <h2>Giỏ hàng</h2>
+        <p id="cartCount">0 sản phẩm</p>
+        <button onclick="showCart()">Xem giỏ hàng</button>
+        </div>
+        <div class="addProduct">
+        <h2>Đơn hàng</h2>
+        <input type="text" placeholder="tên sản phẩm" id="TenSanPham">
+        <input type="number"placeholder="giá sản phẩm" id="giaSanPham"> 
+        <button onclick="createOrder()">Tạo đơn hàng</button>
+        </div>
+   
+    <script>
+        let cart = []; // Mảng chứa thông tin sản phẩm đã đặt
+        
+        function addToCart(productName, price) {
+            cart.push({ name: productName, price: price });
+            updateCartCount();
+        }
+        
+        function updateCartCount() {
+            let cartCountElement = document.getElementById('cartCount');
+            cartCountElement.innerHTML = cart.length + ' sản phẩm';
+        }
+        
+        function showCart() {
+            let cartItems = '';
+            for (let i = 0; i < cart.length; i++) {
+                cartItems += 'Tên sản phẩm: ' + cart[i].name + ', Giá: $' + cart[i].price + "<br>";
+            }
+            alert('Thông tin giỏ hàng:\n\n' + cartItems);
+        }
+        function createOrder() {
+            const orderItems = document.getElementById('TenSanPham').value;
+            const totalPrice = document.getElementById('giaSanPham').value;
+            const ulElement = document.getElementById('list-items');
+
+            const li = document.createElement('li');
+                const div = document.createElement('div');
+                div.classList.add('product');
+                    const h2 = document.createElement('h2');
+                    h2.textContent = orderItems ;
+                        const p = document.createElement('p');
+                        p.textContent = 'giá:' +' '+ '$' + totalPrice;
+                            const div2 = document.createElement('div');
+                            div2.innerHTML = '<button onclick="addToCart()">Mua sản phẩm</button>';
+
+            if(orderItems !== '' && totalPrice !== ''){
+                ulElement.appendChild(li);
+                    li.appendChild(div);
+                        div.appendChild(h2);
+                            div.appendChild(p);
+                                div.appendChild(div2);
+            } else{  
+
+                alert('Đơn hàng đã được tạo:\n\n' + orderItems + '\nTổng giá: $' + totalPrice);
+                updateCartCount();
+            }
+            }
+        
+    </script>
+</body>
+</html>
