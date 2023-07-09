@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fiverserver.json">
+    <title>thử code tí</title>
+    </head>
+<body>
+    <h1>Những người thân quen</h1>
+        <p> smt </p>
+        <p> smtelse</p>
+        <p> smtelse again</p>
+        <p> n again</p>
+    <script>
+        const p = document.querySelectorAll('p');
+        const doDai = p.length;
+        p.forEach((p,i) => {
+                if(i % 2 === 0){
+                    p.setAttribute('class', 'red');
+                }else{
+                    p.setAttribute('class', 'yellow');
+            }
+        });
+        
+        
+
+
+        </script>
+        
+</body>
+<style>
+    .red{
+        background-color: aquamarine;
+    }
+    .yellow{
+        background-color: green;
+    }
+    p{
+        margin:  0px;
+    }
+</style>
+</html>    
+

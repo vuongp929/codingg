@@ -1,0 +1,88 @@
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="fiverserver.json">
+        <title>Wave Wanderlust</title>
+</head>
+<body>
+  <div class="slideshow-container">
+    <div class="slide">
+      <img src="image1.jpg" alt="Image 1">
+    </div>
+    <div class="slide">
+      <img src="image2.jpg" alt="Image 2">
+    </div>
+    <div class="slide">
+      <img src="image3.jpg" alt="Image 3">
+    </div>
+  </div>
+  
+  <div class="arrow-container">
+    <div class="arrow left-arrow">&#10094;</div>
+    <div class="arrow right-arrow">&#10095;</div>
+  </div>
+  
+  <script>
+    var slides = document.querySelectorAll('.slide');
+var currentSlide = 0;
+var slideInterval = setInterval(nextSlide, 3000);
+
+function nextSlide() {
+  slides[currentSlide].style.display = 'none';
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].style.display = 'block';
+}
+
+function previousSlide() {
+  slides[currentSlide].style.display = 'none';
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  slides[currentSlide].style.display = 'block';
+}
+
+var leftArrow = document.querySelector('.left-arrow');
+var rightArrow = document.querySelector('.right-arrow');
+
+leftArrow.addEventListener('click', previousSlide);
+rightArrow.addEventListener('click', nextSlide);
+
+  </script>
+  </body>
+  <style>
+    .slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Thay đổi kích thước slideshow tùy ý */
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+}
+
+.arrow-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.arrow {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 30px;
+  padding: 10px;
+}
+
+.left-arrow {
+  margin-right: 10px;
+}
+
+.right-arrow {
+  margin-left: 10px;
+}
+
+  </style>
+  </html>
+    

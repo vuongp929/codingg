@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Popup Page</title>
+    <style>
+        li {
+  list-style-type: none;
+  margin: 5px 0;
+}
+#formDanhSach{
+    width: 300px;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    position: absolute;
+    top: 20%;
+    display: n;
+}
+#TenListMoi{
+    width: 100%;
+    height: 30px;
+}
+.InputOutput{
+    padding-top: 30px;
+}
+    </style>
+</head>
+<body>
+    <input type="text" id="commentInput">
+<button id="addButton">Thêm bình luận</button>
+
+<div id="commentContainer"></div>
+
+<script>
+    const commentInput = document.getElementById('commentInput');
+const addButton = document.getElementById('addButton');
+const commentContainer = document.getElementById('commentContainer');
+
+addButton.addEventListener('click', function() {
+  const comment = commentInput.value;
+  if (comment !== '') {
+    createComment(comment);
+    commentInput.value = '';
+  }
+});
+
+function createComment(comment) {
+  const commentElement = document.createElement('p');
+  commentElement.textContent = comment;
+  commentContainer.prepend(commentElement);
+}
+</script>
+</body>
+</html>
